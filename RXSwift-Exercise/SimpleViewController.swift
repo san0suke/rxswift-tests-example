@@ -9,11 +9,11 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ViewController: UIViewController {
+class SimpleViewController: UIViewController {
     
     private let disposeBag = DisposeBag()
     
-    private let firstTextField: UITextField = {
+    let firstTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Enter first value"
         textField.borderStyle = .roundedRect
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         return textField
     }()
     
-    private let secondTextField: UITextField = {
+    let secondTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Enter second value"
         textField.borderStyle = .roundedRect
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         return textField
     }()
     
-    private let resultLabel: UILabel = {
+    let resultLabel: UILabel = {
         let label = UILabel()
         label.text = ""
         label.textAlignment = .center
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         return label
     }()
     
-    private let stackView: UIStackView = {
+    let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.alignment = .fill
@@ -79,7 +79,7 @@ class ViewController: UIViewController {
         Observable
             .combineLatest(firstTextField.rx.text.orEmpty,
                            secondTextField.rx.text.orEmpty) { firstText, secondText in
-                return "First: \(firstText), Second: \(secondText)"
+                return "First: \(firstText)\nSecond: \(secondText)"
             }
             .bind(to: resultLabel.rx.text)
             .disposed(by: disposeBag)
