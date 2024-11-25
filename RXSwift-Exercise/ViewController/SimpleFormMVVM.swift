@@ -90,5 +90,9 @@ class SimpleFormMVVM: UIViewController {
                 self?.submitButton.backgroundColor = isEnabled ? .systemBlue : .systemGray
             }
             .disposed(by: disposeBag)
+        
+        submitButton.rx.tap
+            .bind(to: viewModel.submitAction)
+            .disposed(by: disposeBag)
     }
 }
