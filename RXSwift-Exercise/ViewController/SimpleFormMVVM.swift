@@ -12,6 +12,7 @@ import RxCocoa
 class SimpleFormMVVM: UIViewController {
     
     let disposeBag = DisposeBag()
+    let viewModel = SimpleFormViewModel()
     
     let nameTextField: UITextField = {
         let textField = UITextField()
@@ -46,6 +47,7 @@ class SimpleFormMVVM: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        setupBindings()
     }
     
     private func setupUI() {
@@ -66,5 +68,27 @@ class SimpleFormMVVM: UIViewController {
             submitButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             submitButton.topAnchor.constraint(equalTo: lastNameTextField.bottomAnchor, constant: 16),
         ])
+    }
+    
+    private func setupBindings() {
+        nameTextField.rx.text.orEmpty
+            .bind(to: viewModel.name)
+            .disposed(by: disposeBag)
+        
+        lastNameTextField.rx.text.orEmpty
+            .bind(to: viewModel.lastName)
+            .disposed(by: disposeBag)
+        
+        viewModel.isSubmitButtonEnable
+            .observe(on: MainScheduler.instance)
+            .bind(to: submitButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        viewModel.isSubmitButtonEnable
+            .observe(on: MainScheduler.instance)
+            .subscribe { [weak self] isEnabled in
+                self?.submitButton.backgroundColor = isEnabled ? .systemBlue : .systemGray
+            }
+            .disposed(by: disposeBag)
     }
 }
