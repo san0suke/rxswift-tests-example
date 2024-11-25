@@ -16,16 +16,12 @@ import RxBlocking
 class SimpleViewControllerTests: XCTestCase {
     
     var viewController: SimpleViewController!
-    var disposeBag: DisposeBag!
-    var scheduler: TestScheduler!
     
     override func setUp() {
         super.setUp()
         
         // Initialize the ViewController
         viewController = SimpleViewController()
-        disposeBag = DisposeBag()
-        scheduler = TestScheduler(initialClock: 0)
         
         // Loading the View in the ViewController
         _ = viewController.view
@@ -33,8 +29,6 @@ class SimpleViewControllerTests: XCTestCase {
     
     override func tearDown() {
         viewController = nil
-        disposeBag = nil
-        scheduler = nil
         super.tearDown()
     }
     

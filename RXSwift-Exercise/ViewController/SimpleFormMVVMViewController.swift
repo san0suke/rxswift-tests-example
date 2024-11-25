@@ -1,5 +1,5 @@
 //
-//  SimpleFormMVVM.swift
+//  SimpleFormMVVMViewController.swift
 //  RXSwift-Exercise
 //
 //  Created by Robson Cesar de Siqueira on 24/11/24.
@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class SimpleFormMVVM: UIViewController {
+class SimpleFormMVVMViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     let viewModel = SimpleFormViewModel()

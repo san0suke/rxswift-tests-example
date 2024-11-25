@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "202B9C21-022F-45FE-8FC5-84A356F2D04B",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:RXSwift-Exercise.xcodeproj",
+      "identifier" : "8A5B25FE2CF398BB00EB0982",
+      "name" : "RXSwift-Exercise"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:RXSwift-Exercise.xcodeproj",
+        "identifier" : "8A5B26172CF398BD00EB0982",
+        "name" : "RXSwift-ExerciseTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:RXSwift-Exercise.xcodeproj",
+        "identifier" : "8A5B26212CF398BD00EB0982",
+        "name" : "RXSwift-ExerciseUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

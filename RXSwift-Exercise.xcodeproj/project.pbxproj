@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A144EE32CF426EB00D7AD33 /* RXSwift-Exercise.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RXSwift-Exercise.xctestplan"; sourceTree = "<group>"; };
 		8A5B25FF2CF398BB00EB0982 /* RXSwift-Exercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RXSwift-Exercise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5B26182CF398BD00EB0982 /* RXSwift-ExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RXSwift-ExerciseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5B26222CF398BD00EB0982 /* RXSwift-ExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RXSwift-ExerciseUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +106,7 @@
 		8A5B25F62CF398BB00EB0982 = {
 			isa = PBXGroup;
 			children = (
+				8A144EE32CF426EB00D7AD33 /* RXSwift-Exercise.xctestplan */,
 				8A5B26012CF398BB00EB0982 /* RXSwift-Exercise */,
 				8A5B261B2CF398BD00EB0982 /* RXSwift-ExerciseTests */,
 				8A5B26252CF398BD00EB0982 /* RXSwift-ExerciseUITests */,
