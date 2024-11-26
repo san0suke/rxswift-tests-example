@@ -1,5 +1,5 @@
 //
-//  SimpleFormMVVMTests.swift
+//  SimpleFormMVVMViewControllerTests.swift
 //  RXSwift-Exercise
 //
 //  Created by Robson Cesar de Siqueira on 24/11/24.
@@ -12,7 +12,7 @@ import RxBlocking
 
 @testable import RXSwift_Exercise
 
-class SimpleFormMVVMTests: XCTestCase {
+class SimpleFormMVVMViewControllerTests: XCTestCase {
     
     var viewController: SimpleFormMVVMViewController!
     
